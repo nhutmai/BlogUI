@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  margin-top: 40px;
+  height: 550px;
+  width: 600px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 40px;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
+  border: 1px #d4d4d4 solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+}
+.title .title__blog {
+  font-weight: bold;
+  font-size: 60px;
+}
+.title .title__blog--b {
+  color: #5488c7;
+}
+.title__login {
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 25px;
+}
+.username {
+  display: flex;
+  width: 100%;
+  min-height: 50px;
+  position: relative;
+}
+.username__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px #9f9f9f solid;
+  border-right: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  min-width: 74px;
+}
+input:focus {
+  outline: none;
+  border: 1px #5488c7 solid;
+}
+.username__input {
+  border: none;
+  border: 1px #9f9f9f solid;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-left: 10px;
+  width: 100%;
+  font-size: 18px;
+}
+.password {
+  display: flex;
+  position: relative;
+  min-height: 50px;
+  width: 100%;
+  position: relative;
+}
+.password__input {
+  border: none;
+  border: 1px #9f9f9f solid;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-left: 10px;
+  font-size: 18px;
+  width: 100%;
+}
+.password__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px #9f9f9f solid;
+  border-right: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  min-width: 74px;
+}
+.password_show {
+  display: none;
+  position: absolute;
+  top: 16px;
+  right: 15px;
+}
+.password_hide {
+  display: block;
+  position: absolute;
+  top: 16px;
+  right: 15px;
+}
+.loginbutton {
+  width: 100%;
+}
+.loginbutton button {
+  width: 100%;
+  background-color: #409eff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  min-height: 50px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.loginbutton button:hover {
+  background-color: #40a0ffbd;
+}
+.signin-forgotpass {
+  cursor: default;
+  font-size: 21px;
+  color: #409eff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.signin-forgotpass span:hover {
+  text-decoration: underline;
+}
+.loginwith {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  cursor: default;
+}
+.loginwith__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  min-width: 150px;
+  border: 1px #bababa solid;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #505050;
+}
+.facebook .fa-brands {
+  color: #5488c7;
+}
+.google .fa-brands {
+  color: #e33629;
+}
+.github .fa-brands {
+  color: rgb(113, 23, 113);
+}
+.fa-brands {
+  margin-right: 4px;
+}
+.err {
+  position: absolute;
+  color: red;
+  bottom: -25px;
+  left: 90px;
+}
+.inputError {
+  border-color: #e33629;
+}

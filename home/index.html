@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- head -->
+      <header>
+        <!-- navBar -->
+        <div class="navbar">
+          <div class="navbar__logo">
+            <span class="navbar__logo--b">B</span
+            ><span class="navbar__logo--log">log</span>
+          </div>
+          <div class="navbar__tab">
+            <div><a href="#">Bài viết</a></div>
+            <div><a href="#">Hỏi đáp</a></div>
+            <div><a href="#">Thảo luận</a></div>
+          </div>
+          <div class="navbar__search">
+            <input
+              type="text"
+              name=""
+              id="searchPost"
+              class="navbar__search--input"
+              placeholder="tìm kiếm"
+            />
+            <div class="navbar__search--icon" onclick="search()">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+          <div class="navbar__lang">
+            <div class="navbar__lang--icon">
+              <img src="../img/vietnam.jpg" alt="" />
+            </div>
+            <div class="navbar__lang--text">VI</div>
+          </div>
+          <div class="navbar__user" id="navbar__user">
+            <div class="navbar__user--avatar" onclick="activeUserMenu()">
+              <img
+                src="../img/vicky-hladynets-C8Ta0gwPbQg-unsplash.jpg"
+                alt=""
+                id="nav__userAvatar"
+              />
+            </div>
+            <div
+              class="navbar__user--name"
+              id="navbar__user--name"
+              onclick="activeUserMenu()"
+            >
+              Adam
+            </div>
+
+            <div class="userMenu" id="userMenu">
+              <a class="navbar__user--logout" href="../index.html">Đăng xuất</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <content>
+        <div class="content">
+          <!-- phần hình banner -->
+          <div class="content__img">
+            <img
+              src="../img/martin-adams-pTCcJSBOTxY-unsplash.jpg"
+              alt=""
+              class="content__img--1"
+            />
+            <div class="content__img--bg"></div>
+          </div>
+
+          <!-- phần nội dung chính -->
+          <div class="content__contents">
+            <!-- phần các bài post và phân trang -->
+            <div class="content__contents--left">
+              <!-- postLisst container -->
+              <div class="postscontanier" id="postscontanier"></div>
+
+              <!-- phân trang -->
+              <div class="pagination">
+                <div class="pagination__icon">
+                  <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="pagination_active">1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>...</div>
+                <div>20</div>
+                <div><i class="fa-solid fa-angle-right"></i></div>
+              </div>
+            </div>
+
+            <!-- phần nội dung phụ bên phải(tác giả phổ biến, câu hỏi) -->
+            <div class="content__contents--right">
+              <div class="authors">
+                <div class="authors__head">
+                  <div class="authors__head--text">Tác giả phổ biến</div>
+                  <div class="authors__head--line"></div>
+                </div>
+                <div class="authors__container">
+                  <div class="author">
+                    <div class="author__top">
+                      <div class="author__top--avatar">
+                        <img src="/image/userAvatar/d.jpg" alt="" />
+                      </div>
+                      <div class="author__top--infor">
+                        <div class="fullname">nguyễn thanh trúc</div>
+                        <div class="username">@trucnguyen</div>
+                        <div class="btn">
+                          <button>+ Theo dõi</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="author__bot">
+                      <div class="author__bot--star">
+                        <div class="icon"><i class="fa-solid fa-star"></i></div>
+                        <div class="text">100</div>
+                      </div>
+                      <div class="author__bot--posts">
+                        <div class="icon"><i class="fa-solid fa-pen"></i></div>
+                        <div class="text">50</div>
+                      </div>
+                      <div class="author__top--followers">
+                        <div class="icon">
+                          <i class="fa-solid fa-user-plus"></i>
+                        </div>
+                        <div class="text">150</div>
+                      </div>
+                      <div class="author__bot--views">
+                        <div class="icon">
+                          <i class="fa-regular fa-eye"></i>
+                        </div>
+                        <div class="text">120</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="author">
+                    <div class="author__top">
+                      <div class="author__top--avatar">
+                        <img src="/image/userAvatar/d.jpg" alt="" />
+                      </div>
+                      <div class="author__top--infor">
+                        <div class="fullname">nguyễn thanh trúc</div>
+                        <div class="username">@trucnguyen</div>
+                        <div class="btn">
+                          <button>+ Theo dõi</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="author__bot">
+                      <div class="author__bot--star">
+                        <div class="icon"><i class="fa-solid fa-star"></i></div>
+                        <div class="text">100</div>
+                      </div>
+                      <div class="author__bot--posts">
+                        <div class="icon"><i class="fa-solid fa-pen"></i></div>
+                        <div class="text">50</div>
+                      </div>
+                      <div class="author__top--followers">
+                        <div class="icon">
+                          <i class="fa-solid fa-user-plus"></i>
+                        </div>
+                        <div class="text">150</div>
+                      </div>
+                      <div class="author__bot--views">
+                        <div class="icon">
+                          <i class="fa-regular fa-eye"></i>
+                        </div>
+                        <div class="text">120</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="author">
+                    <div class="author__top">
+                      <div class="author__top--avatar">
+                        <img src="/image/userAvatar/d.jpg" alt="" />
+                      </div>
+                      <div class="author__top--infor">
+                        <div class="fullname">nguyễn thanh trúc</div>
+                        <div class="username">@trucnguyen</div>
+                        <div class="btn">
+                          <button>+ Theo dõi</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="author__bot">
+                      <div class="author__bot--star">
+                        <div class="icon"><i class="fa-solid fa-star"></i></div>
+                        <div class="text">100</div>
+                      </div>
+                      <div class="author__bot--posts">
+                        <div class="icon"><i class="fa-solid fa-pen"></i></div>
+                        <div class="text">50</div>
+                      </div>
+                      <div class="author__top--followers">
+                        <div class="icon">
+                          <i class="fa-solid fa-user-plus"></i>
+                        </div>
+                        <div class="text">150</div>
+                      </div>
+                      <div class="author__bot--views">
+                        <div class="icon">
+                          <i class="fa-regular fa-eye"></i>
+                        </div>
+                        <div class="text">120</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="questions">
+                <div class="questions__head">
+                  <div class="questions__head--text">Câu hỏi</div>
+                  <div class="questions__head--line"></div>
+                </div>
+                <div class="questions__container">
+                  <div class="question">
+                    <div class="question__title">
+                      Tại sao Access Token không thể thay thế được ...
+                    </div>
+                    <div class="question__infor">
+                      <div class="question__infor--vote">
+                        <div class="icon">
+                          <i class="fa-solid fa-angle-up"></i>
+                          <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="text">12</div>
+                      </div>
+                      <div class="question__infor--share">
+                        <div class="icon">
+                          <i class="fa-solid fa-share"></i>
+                        </div>
+                        <div class="text">20</div>
+                      </div>
+                      <div class="question__infor--views">
+                        <div class="icon">
+                          <i class="fa-regular fa-eye"></i>
+                        </div>
+                        <div class="text">24</div>
+                      </div>
+                      <div class="question__infor--comments">
+                        <div class="icon">
+                          <i class="fa-solid fa-comment"></i>
+                        </div>
+                        <div class="text">50</div>
+                      </div>
+                    </div>
+                    <div class="question__author">Nhutmai</div>
+                    <div class="question__line"></div>
+                  </div>
+                  <div class="question">
+                    <div class="question__title">
+                      Tại sao Access Token không thể thay thế được ...
+                    </div>
+                    <div class="question__infor">
+                      <div class="question__infor--vote">
+                        <div class="icon">
+                          <i class="fa-solid fa-angle-up"></i>
+                          <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="text">12</div>
+                      </div>
+                      <div class="question__infor--share">
+                        <div class="icon">
+                          <i class="fa-solid fa-share"></i>
+                        </div>
+                        <div class="text">20</div>
+                      </div>
+                      <div class="question__infor--views">
+                        <div class="icon">
+                          <i class="fa-regular fa-eye"></i>
+                        </div>
+                        <div class="text">24</div>
+                      </div>
+                      <div class="question__infor--comments">
+                        <div class="icon">
+                          <i class="fa-solid fa-comment"></i>
+                        </div>
+                        <div class="text">50</div>
+                      </div>
+                    </div>
+                    <div class="question__author">Nhutmai</div>
+                    <div class="question__line"></div>
+                  </div>
+                  <div class="question">
+                    <div class="question__title">
+                      Tại sao Access Token không thể thay thế được ...
+                    </div>
+                    <div class="question__infor">
+                      <div class="question__infor--vote">
+                        <div class="icon">
+                          <i class="fa-solid fa-angle-up"></i>
+                          <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="text">12</div>
+                      </div>
+                      <div class="question__infor--share">
+                        <div class="icon">
+                          <i class="fa-solid fa-share"></i>
+                        </div>
+                        <div class="text">20</div>
+                      </div>
+                      <div class="question__infor--views">
+                        <div class="icon">
+                          <i class="fa-regular fa-eye"></i>
+                        </div>
+                        <div class="text">24</div>
+                      </div>
+                      <div class="question__infor--comments">
+                        <div class="icon">
+                          <i class="fa-solid fa-comment"></i>
+                        </div>
+                        <div class="text">50</div>
+                      </div>
+                    </div>
+                    <div class="question__author">Nhutmai</div>
+                    <div class="question__line"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </content>
+      <footer>
+        <div>© 2024 Blog. All rights reserved.</div>
+      </footer>
+    </div>
+    <script src="../data.js"></script>
+    <script src="./loadHomePage.js"></script>
+    <script src="./userMenu.js"></script>
+  </body>
+</html>
